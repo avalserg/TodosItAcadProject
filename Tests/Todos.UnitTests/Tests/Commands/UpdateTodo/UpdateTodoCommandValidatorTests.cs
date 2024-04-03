@@ -7,9 +7,9 @@ using Core.Tests.Attributes;
 
 namespace Todos.UnitTests.Tests.Commands.UpdateTodo
 {
-    public class UpdateTodoValidatorTests: ValidatorTestBase<UpdateTodoCommand>
+    public class UpdateTodoCommandValidatorTests: ValidatorTestBase<UpdateTodoCommand>
     {
-        public UpdateTodoValidatorTests(ITestOutputHelper testOutputHelper) : base(testOutputHelper)
+        public UpdateTodoCommandValidatorTests(ITestOutputHelper testOutputHelper) : base(testOutputHelper)
         {
         }
         protected override IValidator<UpdateTodoCommand> TestValidator =>
