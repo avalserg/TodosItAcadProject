@@ -8,4 +8,5 @@ internal class GetTodoQueryValidator : AbstractValidator<GetTodoQuery>
     {
         RuleFor(e => e.TodoId).GreaterThan(0);
     }
+
 }

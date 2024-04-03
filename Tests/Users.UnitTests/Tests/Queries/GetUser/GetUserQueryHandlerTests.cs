@@ -4,6 +4,7 @@ using AutoMapper;
 using Core.Application.Abstractions.Persistence.Repository.Read;
 using Core.Tests;
 using Core.Tests.Fixtures;
+using Core.Tests.Helpers;
 using Core.Users.Domain;
 using MediatR;
 using Moq;
@@ -60,7 +61,7 @@ public class GetUserQueryHandlerTests : RequestHandlerTestBase<GetUserQuery, Get
         {
             Id = Guid.NewGuid().ToString()
         };
-        
+       
         _usersMok
             .Setup(p =>
                 p.AsAsyncRead().SingleOrDefaultAsync(It.IsAny<Expression<Func<ApplicationUser, bool>>>(), default)
